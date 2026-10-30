@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>KYRON</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;height:100%;background:#0a0710;color:#e9e1ff;font-family:system-ui,sans-serif;overflow:hidden}
+canvas{display:block}
+#hud{position:fixed;inset:0;pointer-events:none}
+#info{position:absolute;left:16px;bottom:16px;padding:10px 14px;border-radius:14px;background:#1a1030aa;border:1px solid #7c3aed66;backdrop-filter:blur(6px);font-size:13px}
+#fps{position:absolute;right:16px;top:12px;font-size:12px;opacity:.7}
+#menu{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(#2a1054,#0a0710);transition:opacity .4s}
+#menu h1{font-size:64px;letter-spacing:12px;margin:0;color:#b784ff;text-shadow:0 0 30px #7c3aed}
+#menu button{padding:14px 42px;border-radius:14px;border:1px solid #7c3aed;background:#1a1030;color:#fff;font-size:18px;cursor:pointer;transition:.2s}
+#menu button:hover{background:#7c3aed;transform:scale(1.05)}
+</style></head><body>
+<div id="menu"><h1>KYRON</h1><button id="play">JOGAR</button><button id="low">MODO ULTRA LOW: <span id="lowv">OFF</span></button></div>
+<div id="hud"><div id="fps"></div><div id="info">WASD mover · Shift correr · Espaço pular · Mouse/setas girar câmera</div></div>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module" src="src/main.js"></script>
+</body></html>
